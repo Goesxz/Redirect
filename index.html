@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vinda, meu bem!</h1>
+        <p>Este site eu fiz especialmente para ti, foi criado com a intenção de te fazer feliz e mostrar lembranças especiais que compartilhei com você. Aqui, você vai encontrar aquilo que eu vejo como: amor, momentos, inspirações e etc...
+         Cada parte desse espaço foi pensada para te lembrar do quanto você é importante para mim e como nossa história é única. Espero que, ao explorar esse cantinho, você sinta todo o meu amor e a gratidão por ter você ao meu lado. 💖</p>
+        <div class="box">
+            <!-- Usando um link com o botão -->
+            <a href="https://goesxz.github.io/Between-Us/">
+                <button class="redirect-button">Clique aqui</button>
+            </a>
+            <!-- Caso queira usar o link simples -->
+            <!-- <a href="https://www.seusite.com">Clique aqui</a> -->
+        </div>
+    </div>
+
+    <script src="scripts.js">window.onload = function() {
+        const greeting = document.querySelector('h1');
+        const hour = new Date().getHours();
+        if (hour < 12) {
+            greeting.textContent = 'Bom dia, meu bem!';
+        } else if (hour < 18) {
+            greeting.textContent = 'Boa tarde, meu bem!';
+        } else {
+            greeting.textContent = 'Boa noite, meu bem!';
+        }
+    };
+
+</script>
+</body>
+</html>
