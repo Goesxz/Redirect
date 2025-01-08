@@ -1,9 +1,9 @@
+/* Reset básico e configuração global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-      
 }
 
 body {
@@ -16,16 +16,17 @@ body {
     justify-content: center;
 }
 
+/* Estilo para o container */
 .container {
-    width: 700px;
+    width: 100%;
+    max-width: 700px; /* Máxima largura */
     background: transparent;
     border: 7px;
     backdrop-filter: blur(5px);
     box-shadow: 1rem;
     padding: 30px 40px;
-    height: 380px;
+    height: auto; /* Altura ajustável */
 }
-
 
 /* Estilo para o título */
 h1 {
@@ -48,6 +49,7 @@ p {
     font-size: 14px;
     color: #888;
 }
+
 /* Estilo para o botão de redirecionamento */
 .redirect-button {
     background-color: #4f168c;
@@ -59,7 +61,8 @@ p {
     text-decoration: none;
     font-size: 16px;
     transition: background-color 0.3s;
-    margin-left: 230px;
+    margin: 20px auto;
+    display: block;
 }
 
 /* Efeito de hover no botão */
@@ -67,3 +70,23 @@ p {
     background-color: #b479d9;
 }
 
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Ajuste a largura do container em telas pequenas */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px; /* Reduz o tamanho da fonte em telas pequenas */
+    }
+
+    p {
+        font-size: 16px; /* Ajuste o tamanho da fonte */
+    }
+
+    .redirect-button {
+        font-size: 14px; /* Ajuste o tamanho do botão */
+        margin-left: 0; /* Remover margin-left fixo */
+    }
+}
